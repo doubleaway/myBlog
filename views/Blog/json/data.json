@@ -1,0 +1,245 @@
+{
+    "about": {
+        "main_txt": [
+            {
+                "text": "<h1><span class='axent'>1년차 </span> 프론트엔드 개발자<span>입니다.</span></h1>"
+            },
+            {
+                "text": "<p>리액트 SPA프로젝트, 반응형 페이지, PHP페이지 유지보수</p>"
+            },
+            {
+                "text": "<p>그리고 jsp와 ajax를 연동한 페이지를 작업한 경험이 있습니다.</p>"
+            }
+        ],
+        "career": [
+            {
+                "date": "21.03 ~ 21.07",
+                "title": "블록체인컴퍼니 / 개발팀"
+            },
+            {
+                "date": "20.05 ~ 21.03",
+                "title": "엘오피아이앤씨 / it개발팀"
+            }
+        ],
+        "project": [
+            {
+                "date": "21.03 ~ 21.06",
+                "title": "ISMS 인증 페이지 추가 및 수정 작업 (jsp&ajax)"
+            },
+            {
+                "date": "20.10 ~ 21.01",
+                "title": "회사 홈페이지 새로 작업(react)"
+            },
+            {
+                "date": "20.07 ~ 20.10",
+                "title": "dm샵 오픈소스 기반 쇼핑몰 어드민페이지 및 쇼핑몰 페이지(php)"
+            },
+            {
+                "date": "20.05 ~ 20.07",
+                "title": "회사 홈페이지 작업(php)"
+            }
+        ]
+    },
+    "skill": {
+        "skills": [
+            "javascript",
+            "jquery",
+            "react",
+            "redux",
+            "scss",
+            "css",
+            "html5",
+            "vue",
+            "typescript",
+            "php",
+            "mysql"
+        ],
+        "study": [
+            {
+                "name": "vue",
+                "percent": "15"
+            },
+            {
+                "name": "php",
+                "percent": "30"
+            },
+            {
+                "name": "mysql",
+                "percent": "30"
+            }
+        ],
+        "good": [
+            {
+                "name": "react",
+                "percent": "75"
+            },
+            {
+                "name": "redux",
+                "percent": "60"
+            },
+            {
+                "name": "typescript",
+                "percent": "50"
+            }
+        ],
+        "greate": [
+            {
+                "name": "javascript",
+                "percent": "90"
+            },
+            {
+                "name": "jquery",
+                "percent": "80"
+            },
+            {
+                "name": "scss",
+                "percent": "100"
+            },
+            {
+                "name": "html5",
+                "percent": "100"
+            },
+            {
+                "name": "css",
+                "percent": "100"
+            }
+        ]
+    },
+    "portfolio": {
+        "thumbnail": [
+            {
+                "language": "react",
+                "title": "장바구니",
+                "id": 4,
+                "site": "https://pedantic-poincare-6922b3.netlify.app"
+            },
+            {
+                "language": "react",
+                "title": "메모장",
+                "id": 3,
+                "site": "https://awesome-hawking-4483f7.netlify.app/"
+            },
+            {
+                "language": "etc",
+                "title": "전화번호부",
+                "id": 2,
+                "site": "http://pager.kr/~c10st15/portfolio/telBook/class.php"
+            },
+            {
+                "language": "js",
+                "title": "상품 페이지",
+                "id": 1,
+                "site": "/event"
+            },
+            {
+                "language": "js",
+                "title": "행렬 계산기",
+                "id": 0,
+                "site": "/calc"
+            }
+        ],
+        "detail": [
+            {
+                "id": 4,
+                "title": "장바구니",
+                "description": [
+                    "리액트 리덕스를 사용한 장바구니입니다.",
+                    "물건을 장바구니에 담을 수 있습니다."
+                ],
+                "detail_of_function": [
+                    "select박스에서 사이즈와 컬러를 선택하면 그에 해당하는 리스트를 출력해줍니다.",
+                    "색으로 된 버튼을 클릭하면 각각 해당하는 색의 옷을 사진으로 확인할 수 있습니다.",
+                    "장바구니에 넣으면 쇼핑 카트에 담긴 리스트를 확인 할 수 있습니다.",
+                    "삭제와 수량을 변경할 수 있습니다.",
+                    "가격에 따라 배송비여부도 확인할 수 있습니다."
+                ],
+                "skill": [
+                    "react",
+                    "redux",
+                    "scss"
+                ],
+                "site": "https://pedantic-poincare-6922b3.netlify.app"
+            },
+            {
+                "id": 3,
+                "title": "메모장",
+                "description": [
+                    "리액트 리덕스를 사용한 메모장입니다.",
+                    "메모를 추가하거나 삭제할 수 있고 중요한 메모는 체크할 수 있습니다."
+                ],
+                "detail_of_function": [
+                    "write버튼을 누르면 메모를 추가할 수 있습니다.",
+                    "DeleteAll 버튼을 누르면 전체 삭제를 할 수 있습니다.",
+                    "concern 버튼을 누르면 즐겨찾기해놓은 메모를 확인 할 수 있습니다.",
+                    "각 메모당 즐겨찾기와 삭제기능을 사용할 수 있습니다."
+                ],
+                "skill": [
+                    "react",
+                    "redux",
+                    "scss"
+                ],
+                "site": "https://awesome-hawking-4483f7.netlify.app/"
+            },
+            {
+                "id": 2,
+                "title": "전화번호부",
+                "description": [
+                    "반응형 전화번호부입니다.",
+                    ".PHP와 DB를 이용해 추가, 삽입, 조회,수정 기능을 이용할 수 있습니다."
+                ],
+                "detail_of_function": [
+                    "로그인과 로그아웃 기능이 구현되어있습니다. 로그인 후 수정과 삭제 추가가 가능합니다.",
+                    "조회 기능은 주제별 검색이 가능합니다.",
+                    "추가기능에선 사진추가가 가능합니다.",
+                    "체크박스로 한번에 삭제가 가능합니다.",
+                    "각각의 오른쪽에 수정기능을 클릭하면 해당 인물을 수정할 수 있습니다."
+                ],
+                "skill": [
+                    "php",
+                    "mySql",
+                    "scss",
+                    "jquery"
+                ],
+                "site": "http://pager.kr/~c10st15/portfolio/telBook/class.php"
+            },
+            {
+                "id": 1,
+                "title": "상품 페이지",
+                "description": [
+                    "스티븐유니버스 더 무비 상품이벤트를 소개하는 페이지입니다."
+                ],
+                "detail_of_function": [
+                    "스크롤 이벤트가 사용된 상품소개 페이지입니다.",
+                    "스크롤을 내릴 시 바뀌는 이미지들을 확인하실 수 있습니다."
+                ],
+                "skill": [
+                    "html5",
+                    "scss",
+                    "javascript",
+                    "jquery"
+                ],
+                "site": "/event"
+            },
+            {
+                "id": 0,
+                "title": "행렬 계산기",
+                "description": [
+                    "더하기, 빼기, 곱셈, 랜덤값입력이 가능한 행렬계산기입니다."
+                ],
+                "detail_of_function": [
+                    "맨위의 input박스에 행과 열을 각각 입력하면 입력한 값의 행과 열을 가진 행렬 두개가 화면에 출력됩니다.",
+                    "더하기,빼기,곱하기 기능을 사용할 시엔 아래의 창에 결과 값이 출력됩니다. 곱셈을 할 시에 만약 행과 열의 숫자가 같지않으면 알림창이 뜹니다.",
+                    "랜덤 버튼은 행과열이 많을때 -50~50까지의 랜덤한 수가 화면에 출력됩니다.",
+                    "리셋 버튼은 행과 열값과 화면에 있는 계산 대상과 결과를 모두 지워줍니다."
+                ],
+                "skill": [
+                    "html5",
+                    "scss",
+                    "javascript",
+                    "jquery"
+                ],
+                "site": "/calc"
+            }
+        ]
+    }
+}

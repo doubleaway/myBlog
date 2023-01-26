@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<title>행렬 계산기</title>
+		<link href="./project1.css" rel="stylesheet" type="text/css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		
+		<div id="wrapBox" class="wrapBox">
+			<div class="inputValue">
+				<h1 class="titleBox">행렬계산기</h1>
+				행: <input id="line" class="line" type="number" value="0" min=0 max=10> X
+				열: <input id="heat" class="heat"type="number" value="0" min=0 max=10>
+				<button id="numberInput">입력</button>
+			</div>
+			<div class="inputBox">
+				<!--값을 입력받는박스-->
+				<div id="processionBox1" class="processionBox1 proceB"></div>
+				<div id="processionBox2"  class="processionBox2 proceB"></div>
+			</div>	
+				<!--계산 버튼-->
+			<div id="buttons" class="buttons"> 
+				<button id="plusC">A + B</button><br>
+				<button id="minusC">A - B</button><br>
+				<button id="multiC">A x B</button><br>
+				<!--<button id="myReset">Reset</button>	-->
+			</div>
+			<!--결과값 넣는곳-->
+			<div id="resultProcession" class="resultprocession">
+			</div>
+		</div>
+		<!--alert 박스-->
+	
+		<div id="alertBoxline" class="alertBox"> 
+			<div> 
+			<p>10보다 작은 수를 입력해 주세요</p>
+			<p class="closeBox">닫기</p>
+		</div>
+		<script src="./caculator.js" type="text/javascript"></script>
+	</body>
+</html>
+

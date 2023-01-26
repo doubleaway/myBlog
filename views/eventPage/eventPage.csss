@@ -1,0 +1,535 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+section {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: -webkit-linear-gradient(top, #53B5F2, #c2fffa);
+  background-size: 100% 100%;
+  background-postion: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  section .mainPage {
+    width: 100%;
+    height: 3000px;
+    background-size: 100% 100%;
+    background-postion: 0 0;
+    background-repeat: no-repeat;
+    background-image: url("./img/mainImg.png");
+    border: 0px solid blue;
+    display: inline-block; }
+    section .mainPage .inmainPage {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-postion: 0 0;
+      background-repeat: no-repeat;
+      background-image: url("./img/mainI1.png");
+      opacity: 0;
+      transition: all 2s; }
+      section .mainPage .inmainPage img {
+        width: 100%;
+        height: 100%; }
+    section .mainPage .introTxt {
+      position: absolute;
+      top: 100px;
+      left: 25%;
+      width: 50%;
+      font-size: 50px;
+      color: white; }
+    section .mainPage .introB {
+      opacity: 0; }
+  section .eventPage {
+    background-size: 100% 100%;
+    background-postion: 0 0;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #FFF6FF;
+    width: 100%;
+    display: inline-block; }
+    section .eventPage h3 {
+      font-size: 35px;
+      height: 80px;
+      line-height: 240px;
+      color: #FFF48F;
+      text-shadow: 2px 2px  #cbc6e1; }
+    section .eventPage h2 {
+      color: #0B2161;
+      letter-spacing: 3px;
+      word-spacing: -1px;
+      font-size: 30px; }
+    section .eventPage h1 {
+      color: #FFF48F;
+      font-size: 45px;
+      line-height: 80px;
+      border: 1px solid red; }
+    section .eventPage h4 {
+      color: #010440;
+      line-height: 30px;
+      margin-top: 20px;
+      font-size: 15px;
+      font-family: 'Gothic A1', sans-serif; }
+      section .eventPage h4:first-child {
+        margin-top: 90px; }
+    section .eventPage header {
+      background-size: 100% 100%;
+      background-postion: 0 0;
+      background-repeat: no-repeat;
+      background-image: url("./img/title.png");
+      width: 30%;
+      height: 300px;
+      display: inline-block;
+      border: 0px solid blue; }
+    section .eventPage .eventContent {
+      font-size: 30px;
+      color: #15132C;
+      position: relative;
+      width: 55%;
+      height: 500px;
+      border: 5px solid #E6D9E4;
+      display: inline-block;
+      box-shadow: 3px 3px 3px  #978dc2;
+      border-radius: 30px;
+      background-color: white;
+      margin-top: 40px; }
+      section .eventPage .eventContent .eContentTxt {
+        margin-left: 20%;
+        margin-top: 5%;
+        text-align: left;
+        line-height: 40px; }
+        section .eventPage .eventContent .eContentTxt span.eventSpan {
+          color: #010440;
+          font-weight: bold; }
+          section .eventPage .eventContent .eContentTxt span.eventSpan::before {
+            content: "o ";
+            color: #52aff7; }
+        section .eventPage .eventContent .eContentTxt p.eventSpan {
+          font-weight: bold; }
+      section .eventPage .eventContent .eventButton {
+        position: absolute;
+        top: 15%;
+        right: 5%; }
+        section .eventPage .eventContent .eventButton button {
+          position: relative;
+          margin-top: 30px;
+          width: 150px;
+          height: 60px;
+          border: none;
+          border-radius: 40px;
+          font-weight: bold;
+          font-size: 20px;
+          color: white;
+          outline: none;
+          cursor: pointer;
+          background: -webkit-linear-gradient(top, #53B5F2, #AEF4ED); }
+          section .eventPage .eventContent .eventButton button:hover {
+            color: #FFF48F; }
+          section .eventPage .eventContent .eventButton button::before {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background: -webkit-linear-gradient(top, #53B5F2, #72CBF1);
+            top: -10px;
+            left: 5px; }
+          section .eventPage .eventContent .eventButton button::after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            bottom: -10px;
+            right: 5px;
+            background: -webkit-linear-gradient(top, #86D8EF, #AEF4ED); }
+      section .eventPage .eventContent .eventProduct {
+        width: 60%;
+        height: 150px;
+        border: 0px solid blue;
+        display: inline-block;
+        margin-top: 30px; }
+        section .eventPage .eventContent .eventProduct div {
+          width: 20%;
+          height: 100%;
+          float: left;
+          margin-left: 4%; }
+          section .eventPage .eventContent .eventProduct div img {
+            width: 100%;
+            height: 100%; }
+      section .eventPage .eventContent .steven {
+        clear: both;
+        background-size: 100% 100%;
+        background-postion: 0 0;
+        background-repeat: no-repeat;
+        background-image: url("./img/steven.png");
+        width: 300px;
+        height: 380px;
+        border: 0px solid blue;
+        border-radius: 30px;
+        position: absolute;
+        left: -10%;
+        bottom: 0px; }
+  section .movieBox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    display: none; }
+    section .movieBox .movie {
+      width: 60%;
+      height: 700px;
+      position: absolute;
+      left: 50%;
+      margin-left: -30%;
+      top: 50%;
+      margin-top: -350px; }
+      section .movieBox .movie .Mv {
+        width: 100%;
+        height: 100%; }
+      section .movieBox .movie p {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0px;
+        right: 3px;
+        cursor: pointer;
+        z-index: 10; }
+        section .movieBox .movie p::before {
+          content: "x";
+          padding: 5px 15px;
+          width: 35px;
+          height: 35px;
+          border-radius: 10px;
+          background-color: #ee3b95; }
+      section .movieBox .movie video {
+        width: 100%;
+        height: 100%; }
+  section .notice {
+    margin-top: 25px;
+    display: inline-block;
+    width: 45%;
+    height: 150px;
+    text-align: left;
+    line-height: 25px;
+    font-weight: bold;
+    font-family: 'Gothic A1', sans-serif;
+    color: #0B2161;
+    letter-spacing: 3px;
+    word-spacing: -1px; }
+    section .notice p::before {
+      content: "* ";
+      width: 30px;
+      height: 30px; }
+  section .trailler {
+    margin-left: 10%;
+    width: 80%;
+    height: 400px; }
+    section .trailler .videoBox {
+      width: 100%;
+      height: 2500px;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      display: none; }
+      section .trailler .videoBox .videoCon {
+        width: 60%;
+        height: 700px;
+        position: absolute;
+        border: 0px solid blue;
+        top: 50%;
+        left: 50%;
+        margin-left: -30%;
+        margin-top: -150px;
+        border-radius: 13px;
+        overflow: hidden; }
+        section .trailler .videoBox .videoCon p {
+          width: 50px;
+          height: 50px;
+          background-color: red; }
+        section .trailler .videoBox .videoCon::before {
+          content: "X";
+          width: 50px;
+          height: 50px;
+          background-color: #df30a5;
+          color: #fed8fc;
+          position: absolute;
+          right: 0;
+          line-height: 50px;
+          text-align: center;
+          border-radius: 15px;
+          z-index: 10;
+          cursor: pointer; }
+    section .trailler h1 {
+      height: 100px;
+      line-height: 100px; }
+    section .trailler li {
+      width: 20%;
+      height: 200px;
+      float: left;
+      margin-left: 4%;
+      list-style: none;
+      border-radius: 30px; }
+      section .trailler li .xi-4x {
+        width: 20%;
+        height: 100px;
+        color: #d4dbea;
+        line-height: 200px;
+        cursor: pointer; }
+        section .trailler li .xi-4x:hover {
+          color: #f872ea;
+          transition: all 0.7s; }
+      section .trailler li.tra1 {
+        background-image: url("./img/movie1.jpg");
+        background-size: 100% 100%;
+        background-postion: 0 0;
+        background-repeat: no-repeat; }
+      section .trailler li.tra2 {
+        background-image: url("./img/movie2.jpg");
+        background-size: 100% 100%;
+        background-postion: 0 0;
+        background-repeat: no-repeat; }
+      section .trailler li.tra3 {
+        background-image: url("./img/mv1.jpg");
+        background-size: 100% 100%;
+        background-postion: 0 0;
+        background-repeat: no-repeat; }
+      section .trailler li.tra4 {
+        background-image: url("./img/movie4.jpg");
+        background-size: 100% 100%;
+        background-postion: 0 0;
+        background-repeat: no-repeat; }
+  section .steelCut {
+    clear: both;
+    width: 60%;
+    margin-left: 20%;
+    height: 500px;
+    border: 0px solid blue; }
+    section .steelCut span {
+      float: left;
+      font-size: 100px;
+      line-height: 500px;
+      margin-left: 6px; }
+    section .steelCut h1 {
+      height: 100px;
+      line-height: 100px; }
+    section .steelCut .steelCon {
+      width: 86.5%;
+      height: 500px;
+      border: 0px solid blue;
+      float: left;
+      margin-left: 10px; }
+      section .steelCut .steelCon img {
+        width: 100%;
+        height: 100%; }
+  section .sinopsis {
+    font-weight: bold; }
+    section .sinopsis > h1 {
+      width: 100%;
+      height: 200px;
+      line-height: 350px;
+      font-size: 70px;
+      color: #FFF48F;
+      text-shadow: 3px 3px  #cbc6e1;
+      border: 0px solid blue; }
+    section .sinopsis > h2 {
+      margin-top: 30px;
+      color: white;
+      text-shadow: 3px 3px 3px 3px  #a1271b;
+      font-size: 35px; }
+    section .sinopsis .movieSteven {
+      width: 35%;
+      height: 400px;
+      border: 0px solid blue;
+      display: inline-block; }
+      section .sinopsis .movieSteven img {
+        width: 100%;
+        height: 100%; }
+    section .sinopsis .resetJems {
+      width: 75%;
+      height: 450px;
+      border: 0px solid blue;
+      display: inline-block;
+      margin-top: 80px; }
+      section .sinopsis .resetJems div {
+        width: 20%;
+        height: 100%;
+        float: left;
+        border-radius: 15px;
+        margin-left: 3.8%; }
+        section .sinopsis .resetJems div:first-child img {
+          width: 100%;
+          height: 100%; }
+        section .sinopsis .resetJems div:nth-child(2) img {
+          width: 100%;
+          height: 100%; }
+        section .sinopsis .resetJems div:nth-child(3) img {
+          width: 100%;
+          height: 100%; }
+        section .sinopsis .resetJems div:nth-child(4) img {
+          width: 100%;
+          height: 100%; }
+    section .sinopsis .sinopTXTB {
+      width: 60%;
+      height: 350px;
+      color: #3c7199;
+      display: inline-block;
+      border: 0px solid blue;
+      margin-top: 50px;
+      color: #0B2161;
+      letter-spacing: 3px;
+      word-spacing: -1px; }
+      section .sinopsis .sinopTXTB p {
+        line-height: 30px;
+        font-size: 20px; }
+      section .sinopsis .sinopTXTB h1 {
+        line-height: 40px;
+        font-size: 40px;
+        color: #efeaf3;
+        text-shadow: 1px 1px 1px #a252a5;
+        margin-top: 30px; }
+    section .sinopsis .sinopimg {
+      width: 100%;
+      height: 1000px; }
+      section .sinopsis .sinopimg img {
+        width: 100%;
+        height: 100%; }
+
+.popWrap {
+  display: none;
+  width: 60%;
+  height: 600px;
+  position: absolute;
+  left: 20%;
+  top: 3400px;
+  border-radius: 30px;
+  background-color: #d2dce6;
+  border: 1px solid red; }
+  .popWrap::before {
+    content: "X";
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer; }
+  .popWrap .introBox {
+    width: 100%;
+    height: 300px;
+    border: 0px solid blue; }
+    .popWrap .introBox > div {
+      width: 40%;
+      height: 100%;
+      float: left;
+      outline: 0px solid blue; }
+      .popWrap .introBox > div:first-child {
+        text-align: center; }
+        .popWrap .introBox > div:first-child img {
+          width: 45%;
+          height: 90%;
+          margin-top: 20px; }
+      .popWrap .introBox > div:last-child {
+        width: 60%; }
+      .popWrap .introBox > div.navText h1 {
+        height: 80px;
+        line-height: 80px; }
+      .popWrap .introBox > div.navText .simpleText p {
+        width: 100%;
+        height: 20px;
+        margin-top: 15px;
+        line-height: 20px; }
+  .popWrap .mainContent .movieBox {
+    width: 100%;
+    height: 50px;
+    border: 0px solid blue; }
+    .popWrap .mainContent .movieBox li {
+      width: 30%;
+      height: 100%;
+      outline: 0px solid blue;
+      float: left;
+      margin-left: 2.5%;
+      list-style: none;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold; }
+  .popWrap .mainContent .movieCon {
+    clear: both;
+    width: 100%;
+    height: 250px; }
+    .popWrap .mainContent .movieCon > li {
+      text-indent: 5px;
+      line-height: 30px;
+      width: 30%;
+      height: 100%;
+      outline: 0px solid blue;
+      float: left;
+      margin-left: 2.5%;
+      list-style: none; }
+      .popWrap .mainContent .movieCon > li:nth-child(1) {
+        background-image: url("./img/movieBox1.png");
+        background-size: 70% 80%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat; }
+        .popWrap .mainContent .movieCon > li:nth-child(1) img {
+          margin-left: 15%;
+          margin-top: 10px;
+          width: 70%;
+          height: 80%;
+          transform: scale(0);
+          transition: all 3s; }
+      .popWrap .mainContent .movieCon > li:nth-child(2) {
+        background-image: url("./img/circleList.png");
+        background-size: 100% 100%;
+        background-postion: 0 0;
+        background-repeat: no-repeat;
+        background-size: 90% 100%; }
+      .popWrap .mainContent .movieCon > li:nth-child(3) {
+        position: relative; }
+        .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox {
+          width: 0px;
+          height: 250px;
+          overflow: hidden;
+          transition: all 3s; }
+          .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox div {
+            height: 30px;
+            margin-top: 10px;
+            background-color: red; }
+            .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox div.teenAge {
+              width: 100px;
+              background-color: #eac7d4; }
+            .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox div.tewnAge {
+              width: 60px;
+              background-color: #dec1e4; }
+            .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox div.thirAge {
+              width: 50px;
+              background-color: #dca7d8; }
+            .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox div.fourAge {
+              width: 200px;
+              background-color: #b6a6d2; }
+            .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox div.fifteeAge {
+              width: 50px;
+              background-color: #ae76d9; }
+          .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox .graduGraph {
+            width: 10%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 2s; }
+            .popWrap .mainContent .movieCon > li:nth-child(3) .yearBox .graduGraph li {
+              margin-top: 20px;
+              height: 10%;
+              width: 100%;
+              list-style: none; }
+
+/*# sourceMappingURL=eventPage.csss.map */

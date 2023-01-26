@@ -1,0 +1,393 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.earBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  width: 1200px;
+  height: 550px;
+  border: 0px solid red;
+}
+.earBox .inEar {
+  width: 550px;
+  height: 550px;
+  background-color: #faf3e2;
+  border-radius: 100%;
+  box-shadow: 25px 25px #fee9e0;
+  text-align: center;
+}
+.earBox .inEar p {
+  width: 70%;
+  height: 70%;
+  background-color: #f2c1c5;
+  margin-top: 50px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.earBox .ear1 {
+  border: 0px solid red;
+  float: right;
+}
+
+.bg {
+  clear: both;
+  width: 100%;
+  height: 1400px;
+  background-color: #ccdddf;
+}
+.bg .wrapBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  width: 1200px;
+  color: #3c3434;
+  background-color: #faf3e2;
+  box-shadow: 25px 25px #fee9e0;
+  border-radius: 10px;
+  top: 250px;
+  height: 1100px;
+  text-align: center;
+}
+.bg .wrapBox .titleBox {
+  height: 100px;
+  line-height: 150px;
+  font-family: "Sigmar One", cursive;
+  font-size: 30px;
+  color: #3c3434;
+}
+.bg .wrapBox .inputValue input {
+  background-color: #f2c1c5;
+  border: none;
+  text-align: right;
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 120px;
+}
+.bg .wrapBox .inputValue .inputBtn {
+  margin-left: 30px;
+  width: 100px;
+  font-family: "Jua", sans-serif;
+  height: 50px;
+  background-color: #f0bbc1;
+  color: #cf8590;
+  font-size: 20px;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 30px;
+  display: inline-block;
+  clear: both;
+}
+.bg .wrapBox .inputValue .inputBtn:hover {
+  color: #fff8ea;
+  background-color: #f2c1c5;
+  cursor: pointer;
+}
+.bg .wrapBox .buttons .btnC {
+  box-shadow: -2px 5px #cf8590;
+  border: 2px solid #cf8590;
+}
+.bg .wrapBox .buttons .btn {
+  font-family: "Sigmar One", cursive;
+  width: 120px;
+  margin-left: 10px;
+  height: 50px;
+  background-color: #f0bbc1;
+  color: #cf8590;
+  font-size: 20px;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 30px;
+  display: inline-block;
+  clear: both;
+}
+.bg .wrapBox .buttons .btn:hover {
+  color: #fff8ea;
+  background-color: #f2c1c5;
+  cursor: pointer;
+}
+.bg .wrapBox .inputBox {
+  margin-top: 30px;
+  width: 1000px;
+  height: 380px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #b3cccf;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.bg .wrapBox .proceB {
+  width: 50%;
+  float: left;
+  outline: 0px solid red;
+}
+.bg .wrapBox .proceB .inInputBox {
+  color: #3c3434;
+  display: inline;
+  width: 40px;
+  height: 30px;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.bg .wrapBox .resultprocession {
+  margin-top: 30px;
+  width: 1000px;
+  height: 380px;
+  border-radius: 10px;
+  display: inline-block;
+  color: #3c3434;
+  background-color: #b3cccf;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.bg .wrapBox .resultprocession .resultBox {
+  display: inline;
+  width: 40px;
+  height: 30px;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.alertBox {
+  width: 300px;
+  height: 200px;
+  background-color: #fee9e0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  border: 0px solid red;
+  border-radius: 20px;
+  z-index: 10;
+  padding: 30px;
+  box-sizing: border-box;
+  display: none;
+  color: #3c3434;
+  font-family: "Jua", sans-serif;
+}
+.alertBox .closeBox {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.alertBox .closeBox::after {
+  content: "x";
+  width: 40px;
+  padding: 1px 6px;
+  background-color: #cf8590;
+  text-align: center;
+  color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.earBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  width: 1200px;
+  height: 550px;
+  border: 0px solid red;
+}
+.earBox .inEar {
+  width: 550px;
+  height: 550px;
+  background-color: #faf3e2;
+  border-radius: 100%;
+  box-shadow: 25px 25px #fee9e0;
+  text-align: center;
+}
+.earBox .inEar p {
+  width: 70%;
+  height: 70%;
+  background-color: #f2c1c5;
+  margin-top: 50px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.earBox .ear1 {
+  border: 0px solid red;
+  float: right;
+}
+
+.bg {
+  clear: both;
+  width: 100%;
+  height: 1400px;
+  background-color: #ccdddf;
+}
+.bg .wrapBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  width: 1200px;
+  color: #3c3434;
+  background-color: #faf3e2;
+  box-shadow: 25px 25px #fee9e0;
+  border-radius: 10px;
+  top: 250px;
+  height: 1100px;
+  text-align: center;
+}
+.bg .wrapBox .titleBox {
+  height: 100px;
+  line-height: 150px;
+  font-family: "Sigmar One", cursive;
+  font-size: 30px;
+  color: #3c3434;
+}
+.bg .wrapBox .inputValue input {
+  background-color: #f2c1c5;
+  border: none;
+  text-align: right;
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 120px;
+}
+.bg .wrapBox .inputValue .inputBtn {
+  margin-left: 30px;
+  width: 100px;
+  font-family: "Jua", sans-serif;
+  height: 50px;
+  background-color: #f0bbc1;
+  color: #cf8590;
+  font-size: 20px;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 30px;
+  display: inline-block;
+  clear: both;
+}
+.bg .wrapBox .inputValue .inputBtn:hover {
+  color: #fff8ea;
+  background-color: #f2c1c5;
+  cursor: pointer;
+}
+.bg .wrapBox .buttons .btnC {
+  box-shadow: -2px 5px #cf8590;
+  border: 2px solid #cf8590;
+}
+.bg .wrapBox .buttons .btn {
+  font-family: "Sigmar One", cursive;
+  width: 120px;
+  margin-left: 10px;
+  height: 50px;
+  background-color: #f0bbc1;
+  color: #cf8590;
+  font-size: 20px;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 30px;
+  display: inline-block;
+  clear: both;
+}
+.bg .wrapBox .buttons .btn:hover {
+  color: #fff8ea;
+  background-color: #f2c1c5;
+  cursor: pointer;
+}
+.bg .wrapBox .inputBox {
+  margin-top: 30px;
+  width: 1000px;
+  height: 380px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #b3cccf;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.bg .wrapBox .proceB {
+  width: 50%;
+  float: left;
+  outline: 0px solid red;
+}
+.bg .wrapBox .proceB .inInputBox {
+  color: #3c3434;
+  display: inline;
+  width: 40px;
+  height: 30px;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.bg .wrapBox .resultprocession {
+  margin-top: 30px;
+  width: 1000px;
+  height: 380px;
+  border-radius: 10px;
+  display: inline-block;
+  color: #3c3434;
+  background-color: #b3cccf;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.bg .wrapBox .resultprocession .resultBox {
+  display: inline;
+  width: 40px;
+  height: 30px;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.alertBox {
+  width: 300px;
+  height: 200px;
+  background-color: #fee9e0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  border: 0px solid red;
+  border-radius: 20px;
+  z-index: 10;
+  padding: 30px;
+  box-sizing: border-box;
+  display: none;
+  color: #3c3434;
+  font-family: "Jua", sans-serif;
+}
+.alertBox .closeBox {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.alertBox .closeBox::after {
+  content: "x";
+  width: 40px;
+  padding: 1px 6px;
+  background-color: #cf8590;
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=project1.css.map */

@@ -1,0 +1,31 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+}
+.intro img {
+  width: 100%;
+  height: 100%;
+}
+.intro .heart {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -200px;
+}
+.intro .heart img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,811 @@
+@import "reset";
+$display: inline-block;//display설정
+$border: 0px solid blue;//표시선
+$yellow:  #FFF48F;
+//background-image 기본설정
+@mixin backImg{
+	background:{
+		size: 100% 100%;
+		position: 0% 0%;
+		repeat: no-repeat;
+	}
+}
+//img 기본설정
+@mixin Img{
+	width: 100%;
+	height: 100%;
+}
+//버튼디자인
+@mixin button{
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+}
+//글씨 기본 설정
+@mixin text{
+	color: #0B2161;
+	letter-spacing: 2px;
+	word-spacing: -1px;
+}
+//포트폴리오 문구
+header.portfolio{
+	position:absolute;
+	width: 100%;
+	height: 100px;
+	font-size: 35px;
+	text-align: center;
+	left: 0px;
+	top: 0px;
+	line-height: 100px;
+	z-index: 30;
+	@include text;
+	color: white;
+	& .xi-star{
+		color: $yellow;
+	}
+}
+nav{
+	width: 100px;
+	height: 100%;
+	border: $border;
+	position: fixed;
+	right: 5%;
+	top: 30%;
+	z-index: 100;
+	& ul{
+		width: 100px;
+		height: 100%;
+		border: $border;
+		right: 0%;
+		& li{
+			width: 100%;
+			height: 120px;
+			line-height: 120px;
+			text-align: center;
+			list-style: none;
+			.xi-star{
+				color: $yellow;
+			}
+		}
+	}
+}
+//메인페이지
+section{
+	font-family: 'Noto Sans KR', sans-serif;
+	background: -webkit-linear-gradient(top, #53B5F2,  #c2fffa);
+	@include backImg;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	//메인 페이지
+	.mainPage{
+		width: 100%;
+		height: 3000px;
+		@include backImg;
+		background-image:url("views/eventPageinImg.png");
+		border: $border;
+		display: $display;
+			//메인페이지안의 
+			.inmainPage{
+				width: 100%;
+				height: 100%;
+				@include backImg;
+				background-image:url("views/eventPageinI1.png");
+				opacity: 0;
+				transition: all 2s;
+				& img{
+					@include Img;
+				}
+			}
+			//메인화면 첫 시작 문구
+			 
+		       	& .introTxt{
+                                        position: absolute;
+                                          top: 500px;
+                                          left: 50%;
+                                          width: 36%;
+                                          font-size: 50px;
+                                          color: white;
+					  line-height: 50px;
+					  text-shadow: 2px  2px #8d9bc5;
+					  & span{
+						  float: left;
+					  }
+					  & h1{
+						  float: left;
+						  width: 400px;
+						  color: #fc4ccf;
+						  font-size: 80px;
+					  }
+					  & h2{
+						  color: #fc4ccf;
+						  font-size: 80px;
+					  }
+                                  }
+				  //메인페이지 두번째 문구
+				  .introB{
+					  clear: both;
+					  left: 50%;
+					  width: 800px;
+					  line-height: 100px;
+					  top: 1100px;
+					  & h1{
+						  float: left;
+					  }
+					  & h2{
+						  font-size: 130px;
+						  line-height: 130px;
+					  }
+				  }
+				  //줄거리
+				.summary
+					{
+					width: 55%;
+					height: 400px;
+					position: absolute;
+					left: 100%;
+					top: 2300px;
+					opacity: 0;
+					transition: all 1.5s;
+					& h1{
+						height: 80px;
+						line-height: 80px;
+						color: $yellow;
+						font-size: 50px;
+						text-align: left;
+						text-shadow: 2px 2px 2px #9b84ba;
+					}
+					 li{
+						@include text;
+						color: white;
+						font:{
+							size: 26px;
+							}
+						line-height: 50px;
+						text-align: left;
+						list-style: none;
+						text-shadow: 3px 3px 3px #43283a;
+					}
+				}
+			//줄거리 애니메이션-바뀌는 class
+			.summaryCh{
+					position: absolute;
+					left: 40%;
+					top: 2200px;
+					width: 55%;
+					height: 400px;
+					opacity: 1;
+					transition: all 1.7s;
+					& h1{
+						height: 180px;
+						line-height: 180px;
+						color: $yellow;
+						font-size: 100px;
+						text-align: left;
+						text-shadow: 6px 6px  #9b84ba;
+					}
+					 li{
+						@include text;
+						color: #dafbf5;
+						font:{
+							size: 32px;
+							weight: bold;
+						}
+						line-height: 60px;
+						text-align: left;
+						list-style: none;
+						text-shadow: 4px 4px 4px #43283a;
+					}
+			}
+
+		}
+		//이벤트 페이지
+	.eventPage{	
+			@include backImg;
+			position: relative;
+			color: #FFF6FF;
+			width: 100%;
+			display: $display;
+				//영화 한줄 소개
+				& h3{
+					font-size: 35px;
+					height: 80px;
+					line-height: 240px;
+					color: $yellow;
+					text-shadow: 2px 2px  #cbc6e1;
+				}
+				& h2{
+					@include text;
+					font-size: 30px;
+				}
+				//이벤트 제목
+				& h1{
+					color: $yellow;
+					font-size: 45px;
+					line-height: 80px;
+					text-shadow: 1px 1px 1px #5a1244;
+				}
+				//이벤트 설명글
+				& h4{
+					color: #010440;
+					line-height: 30px;
+					margin-top: 20px;
+					font:{
+						size: 20px;
+						family: 'Gothic A1', sans-serif;
+				}
+					&:first-child{
+						margin-top: 90px
+						
+					}
+
+				}
+			//제목 이미지	
+		header{
+			@include backImg; 
+			background-image:url("views/eventPagetle.png");
+			width: 30%;
+			height: 300px;
+			display: $display;
+			border: $border; 
+		}
+		//이벤트의 상품소개란
+		.eventContent{
+			font-size: 30px;
+			color: #15132C;
+			position: relative;
+			width: 55%;
+			height: 500px;
+			border: 5px solid #E6D9E4;
+			display: $display;
+			box-shadow: 3px 3px 3px  #978dc2;
+			border-radius: 30px;
+			background-color: white;
+			margin-top: 40px;
+			.eContentTxt{
+				margin:{
+					left: 20%;
+					top: 5%;
+				}
+				text-align: left;
+				line-height: 50px;
+				& span{
+				}
+				& span.eventSpan{
+					color: #010440;
+					font-weight: bold;
+					&::before{
+					content: "o ";
+					color: #52aff7;
+					}
+				}
+				& p.eventSpan{
+					font-weight: bold;
+					}
+			}
+	//이벤트 버튼
+	.eventButton{
+			position: absolute;
+			top: 15%;
+			right: 5%;
+		& button{
+			position: relative;
+			margin-top: 30px;
+			width: 150px;
+			height: 60px;
+			border: none;
+			border-radius: 40px;
+			font:{
+				weight: bold;
+				size: 20px;
+			}
+			color: white;
+			outline: none;
+			cursor: pointer;
+      			background: -webkit-linear-gradient(top, #53B5F2 , #AEF4ED);
+			&:hover{
+				color: $yellow;
+			}
+			&::before{ 
+			    @include button;
+      				background: -webkit-linear-gradient(top, #53B5F2 , #72CBF1);
+			    top: -10px;
+			    left: 5px;
+			}
+			&::after{
+				@include button;
+				bottom: -10px;
+				right: 5px;
+      				background: -webkit-linear-gradient(top, #86D8EF , #AEF4ED);
+
+			}
+		}
+	}
+	//경품소개
+	.eventProduct{
+		width: 60%;
+		height: 150px;
+		border: $border;
+		display: $display;
+		margin-top: 0px;
+		& div{
+			width: 20%;
+			height: 100%;
+			float: left;
+			margin-left: 4%;
+			& img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.productTxt{
+			width: 100%;
+			height: 30px;
+			font-size: 25px;
+			& li{
+				float: left;
+				width: 20%;
+				margin-left: 4%;
+				list-style: none;
+
+			}
+		}
+	}
+	//steven 이미지
+	.steven{
+		clear: both;
+		@include backImg; 
+		background-image:url("views/eventPageeven.png");
+		width: 300px;
+		height: 380px;
+		border: $border;
+		border-radius: 30px;
+		position: absolute;
+		left: -10%;
+		bottom: 0px;
+
+
+		}
+	}
+		//예고편 박스
+}		.movieBox{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.8);
+			position: absolute;
+			top: 0px;
+			left: -5px;
+			display: none;
+			& .movie{
+				width: 60%;
+				height: 700px;
+				position: absolute;
+				left: 50%;
+				margin-left: -30%;
+				top: 40%;
+				margin-top: -350px;
+				& .Mv{
+					width: 100%;
+					height: 100%;
+				}
+				& p{	width: 70px;
+					height: 70px;
+					position: absolute;
+					background-color: #ee3b95;
+					border-radius: 10px;
+					top: 0px;
+					right: 0px;
+					cursor: pointer;
+					z-index: 10;
+					&::before{
+						position: absolute;
+						right: 0px;
+						top: 0px;
+						content: "x";
+						width: 70px;
+						height: 70px;
+						line-height: 60px;
+						border-radius: 10px;
+						font-size: 30px;
+						background-color: #ee3b95;
+						}
+					}
+				& video{
+					width: 100%;
+					height: 100%;
+				}
+
+			}
+		}	
+	//안내
+	.notice{
+		margin-top: 25px;
+		display: $display;
+		width: 45%;
+		height: 150px;
+		text-align: left;
+		line-height: 35px;
+		font:{
+			weight: bold;
+			family: 'Gothic A1', sans-serif;
+			size: 25px;
+		}
+		
+		@include text;
+		& p{
+			&::before{
+				content: "* ";
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+	//트레일러
+	.trailler{	
+		
+		&  .videoBox{
+                 width: 100%;
+                 height: 2500px;
+                 background-color: rgba(0,0,0,0.9);
+		 position: absolute;
+		 left: 0px;
+		 top: 0px;
+		 display: none;
+		 & .videoCon{
+			 width: 60%;
+			 height: 700px;
+			 position: absolute;
+			 border: $border;
+			 top: 50%;
+			 left: 50%;
+			 margin-left: -30%;
+			 margin-top: -150px; 
+		   	 border-radius: 13px;
+		       	overflow: hidden;
+			& p{
+				width: 70px;
+				height: 70px;
+				background-color: red;
+			}
+			 &::before{
+				 content:"X";
+				 width: 70px;
+				 height: 70px;
+				 background-color: #df30a5;
+				 color: #fed8fc;
+				 position: absolute;
+				 right: 0;
+				 line-height: 70px;
+				 text-align: center;
+				 font-size: 40px;
+				 border-radius: 15px;
+				 z-index: 10;
+				 cursor: pointer;
+			 }
+		 }
+
+         }
+			margin-left: 10%;
+			width: 80%;
+			height: 400px;
+			//동영상 제목
+			//됐는지 안됐는지 알수가없네..
+			h1{
+				height: 100px;
+				line-height: 100px;
+				}
+					& li{
+						width: 20%;
+						height: 200px;
+						float: left;
+						margin-left: 4%;
+						list-style: none;	
+						border-radius:30px;
+						//동영상 플레이 버튼
+							.xi-4x{
+								width: 20%;
+								height: 100px;
+								color: #d4dbea;
+								line-height: 200px;
+								cursor: pointer;
+								&:hover{
+									color: #f872ea;
+									transition: all 0.7s;
+								}	
+							
+							}
+						&.tra1
+						{
+							background-image:url("img/movie1.jpg");
+							@include backImg;
+						}
+						&.tra2
+						{	background-image:url("img/movie2.jpg");
+							@include backImg;
+						}
+
+						&.tra3
+						{	background-image:url("img/mv1.jpg");
+							@include backImg;
+						}
+						&.tra4{
+							background-image:url("img/movie4.jpg");
+							@include backImg;
+							}
+					}
+				}
+		//스틸컷
+		.steelCut{
+			clear: both;
+			width: 60%;
+			margin-left: 20%;
+			height: 700px;
+			border:$border;
+			border-radius: 40px;
+			background-color: #5fb3e7;
+			//화살표
+			& span{
+				float: left;
+				font-size: 70px;
+				line-height: 500px;
+				width: 75px;
+				text-align: center;
+				display: block;
+				&:hover{
+					color: $yellow;
+					cursor: pointer;
+				}
+			}
+			//스틸컷 제목
+			h1{
+				height: 100px;
+				line-height: 100px;
+			}
+			.steelCon{
+				width: 86.5%;
+				height: 500px;
+				border: $border;
+				border-radius: 30px;
+				float: left;
+				& img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+		}
+
+	//시놉시스
+	.sinopsis{
+		font-weight: bold;
+		//시놉시스  제목
+		&>h1{
+			width: 100%;
+			height: 200px;
+			line-height: 350px;
+			font-size: 70px;
+			color: $yellow;
+			text-shadow: 3px 3px  #cbc6e1;
+			border: $border;
+		}
+		
+		&>h2{
+			margin-top: 30px;
+			color: white;
+			text-shadow: 3px 3px 3px 3px  #a1271b;
+			font-size: 35px;
+		}
+		& .movieSteven{
+			width: 35%;
+			height: 400px;
+			border: $border;
+			display: $display;
+			& img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		//카드모양  리셋젬들 박스
+		& .resetJems{
+			width: 75%;
+			height: 450px;
+			border: $border;
+			display: $display;
+			margin-top: 80px;
+			position: relative;
+			& div{
+				width: 20%;
+				height: 100%;
+				float: left;
+				border-radius: 15px;
+				display: block; 
+				margin-left: 3.8%;
+				cursor: pointer;
+				&:first-child{
+					& img{
+						@include Img;
+					}
+				}
+				&:nth-child(2){
+					& img{
+						@include Img;
+						height: 90%;
+					}
+				}
+				&:nth-child(3){
+					& img{
+						@include Img;
+					}
+				}
+				&:nth-child(4){
+					& img{
+						@include Img;
+					}
+				}
+			}
+		}
+		//sinopsis 글
+		.sinopTXTB{
+			width: 60%;
+			height: 350px;
+			color: #3c7199;
+			display: $display;
+			border: $border;
+			margin-top: 50px;
+			@include text;
+			& p{
+				line-height: 30px;
+				font-size: 20px;
+			}
+			& h1{
+				line-height: 40px;
+				font-size: 40px;
+				color: #efeaf3;
+				text-shadow: 1px 1px 1px #a252a5;
+				margin-top: 30px;
+			}
+		}
+		//sinopsis 이미지
+		.sinopimg{
+			width: 100%;
+			height: 1000px;
+			position: relative;
+			& img{
+				@include Img;
+			}
+		}
+	}
+}
+//팝업창
+.popWrap{
+	display: none;
+	width: 50%;
+	height: 500px;
+	position: absolute;
+	left: 28%;
+	top: 3500px;
+	border-radius: 30px;
+	background-color: red;
+	background-color: #e7b693;
+		&::before{
+			content: " ";
+			top: 60%;
+			left: -40px;
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border:{top: 40px solid transparent;
+				left: 0px solid transparent; 
+				right: 40px solid #e7b693; 
+				bottom: 40px solid transparent; 
+			}
+		}
+		//팝업창 닫기 버튼
+		& button{
+			width: 70px;
+			height: 70px;
+			border: none;
+			border-radius: 20px;
+			background-color:#a4489f;
+			position:absolute;
+			z-index: 10;
+			right: 0px;
+			&::before{
+				content:'X';
+				width: 100%;
+				height: 100%;
+				color: #e7b693;
+				font-size: 40px;
+				cursor: pointer;
+			}
+		}
+	//안의아티클들
+	article{
+		width: 30%;
+		height: 100%;
+		float: left;
+		border: $border;
+	//포스터와 2월대개봉
+	&.introBox{
+		& div{
+			margin:{
+				left: 5%;
+				top: 5%;
+			}
+			//포스터
+			width: 90%;
+			height: 80%;
+			background-image: url("views/eventPageinI1.png");
+			@include backImg;	
+			background-position: 50% 90%;
+		}
+		//2월 대개봉
+		&>p{
+			font-size: 30px;
+			font-weight: bold;
+			line-height: 70px;
+			text-indent: 13px;
+			@include text;
+		}
+	}
+	//메인콘텐츠
+	&.mainContent{
+		background-color: #e7b693;
+		width: 68.3%;
+		//div 공통 클래스
+		&>div{
+			clear: both;
+			width: 100%;
+			margin-top: 14px;
+			height: 48%;
+			outline: $border;
+			background-color: #dfdccf;
+			& p{
+				text-align: center;
+				line-height: 30px;
+				@include text;
+			}
+			&.movieInfo >div{
+				width: 30%;
+				height: 100%;
+				float: left;
+				outline: $border;
+				background-color: #e7b693;
+					&.infoTxt{
+						width: 100%;
+						text-align: left;
+						text-indent: 20px;
+						@include text;
+						& h1{
+							font-size: 35px;
+						}
+						& p{
+							text-align: left;
+							font-size: 25px;
+							line-height: 40px;
+						}
+						& div{
+							font-size: 20px;
+						}
+						& .popupH2{
+							margin-top: 20px;
+						}
+						& h2{
+							line-height: 50px;
+							text-indent: 30px;
+						}
+					}	
+
+					&:nth-child(2){
+						
+					}	
+				}	
+			}
+			
+		}
+	}
+}

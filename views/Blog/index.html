@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="icon" href="Blog/img/logo/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <span class="top_btn">
+        <a href="#intro"><i class="xi-umbrella xi-2x"></i></a>
+    </span>
+    <nav id="nav">
+        <ul>
+            <li onclick="nav_menu_func(0)"><a href="#intro"><i class="menu_item xi-tint xi-3x"></i>
+                    <p>Home</p>
+                </a></li>
+            <li onclick="nav_menu_func(1)"><a href="#about"><i class="menu_item xi-tint-o  xi-3x"></i>
+                    <p>About</p>
+                </a></li>
+            <li onclick="nav_menu_func(2)"><a href="#skill"><i class="menu_item xi-tint-o  xi-3x"></i>
+                    <p>Skill</p>
+                </a></li>
+            <li onclick="nav_menu_func(3)"><a href="#portfolio"><i class="menu_item xi-tint-o  xi-3x"></i>
+                    <p>Porfolio</p>
+                </a></li>
+        </ul>
+    </nav>
+    <section class="intro" id="intro">
+
+        <div class="title">
+            <p data-aos="slide-right" data-aos-easing="ease-out-cubic" data-aos-duration="1600">Yang</p>
+            <p data-aos="slide-right" data-aos-delay="50" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                Cha
+            </p>
+            <p data-aos="slide-right" data-aos-delay="100" data-aos-easing="ease-out-cubic" data-aos-duration="2500">Rin
+            </p>
+        </div>
+        <div class="circle_main" data-aos="slide-left" data-aos-easing="ease-out-cubic" data-aos-duration="1600">
+        </div>
+        <h1 data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000" data-aos-delay="200">
+            PORTFOLIO
+        </h1>
+        <p class="scllor_active" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="3600">scroll
+        </p>
+    </section>
+    <section class="about" id="about">
+        <div class="title_box" data-aos="slide-right" data-aos-easing="ease-out-cubic" data-aos-duration="600"
+            data-aos-delay="100">
+            <h1>A <span>bout</span></h1>
+
+        </div>
+        <article id="about_content_box">
+            <div class="main_txt" id="main_txt" data-aos="fade-up" data-aos-anchor-placement="top-center"
+                data-aos-delay="150">
+
+            </div>
+            <div>
+
+            </div>
+        </article>
+    </section>
+    <section class="skill" id="skill">
+        <div class="title_box" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+            <h1>S <span>kill</span></h1>
+
+        </div>
+        <div class="notification_bar">
+            <ul class="imojy">
+                <li data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600"><i
+                        class="xi-emoticon-smiley xi-2x"></i></li>
+                <li data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1100"><i
+                        class="xi-emoticon-happy xi-2x"></i></li>
+                <li data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1600"><i
+                        class="xi-emoticon-cool xi-2x"></i></li>
+            </ul>
+            <ul class="bar" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+                <li class="study">study</li>
+                <li class="good">good</li>
+                <li class="great">great</li>
+            </ul>
+        </div>
+        <div class="skill_type">
+            <ul id="skill_type_items">
+
+            </ul>
+        </div>
+        <article class="skill_box" id="skill_box">
+
+        </article>
+
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="title_box" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+            <h1>W <span>ork</span></h1>
+        </div>
+        <ul class="tab_menu">
+            <li class="active tab_menu_item" onclick="portfolio_tap_menu('all')">All</li>
+            <li class="tab_menu_item" onclick="portfolio_tap_menu('js')">Javascript</li>
+            <li class="tab_menu_item" onclick="portfolio_tap_menu('react')">React</li>
+            <li class="tab_menu_item" onclick="portfolio_tap_menu('etc')">Etc</li>
+        </ul>
+        <article>
+            <ul data-aos="fade-up-left" data-aos-offset="20" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+                data-aos-anchor-placement="top-center" class="work_content" id="work_content">
+
+            </ul>
+        </article>
+        <article class="detail_page" id="detail_page">
+
+        </article>
+    </section>
+    <section class="contact" id="contact">
+
+        <ul class="contact_back">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="umbrella_stand"></div>
+        <div class="title_box" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+            <h1>C <span>ontact</span></h1>
+
+        </div>
+        <article>
+            <div class="contact_box" data-aos="fade-up">
+                <div class="contact_submit">
+
+                    <ul>
+                        <li>
+                            <h1>Contact Me</h1>
+                        </li>
+                        <li>
+                            <p>안녕하세요. 당신의 연락을 기다립니다</p>
+                            <p>내용 확인 후 답신을 드리겠습니다!</p>
+                        </li>
+                        <li>
+                            <input type="text" name="name" placeholder="성함을 입력해주세요">
+                        </li>
+                        <li>
+                            <input type="text" name="email" placeholder="이메일을 입력해주세요">
+                        </li>
+                        <li>
+                            <input type="text" name="phone" placeholder="연락처를 입력해주세요 (생략 가능)">
+                        </li>
+                        <li>
+                            <textarea name="message" rows="5" placeholder="제안 내용을 입력해주세요 "></textarea>
+
+                        </li>
+                        <li>
+                            <div onClick="email_send()" class="submit_btn" id="submit">Send</div>
+                            <div class='submit_btn' id="submit_dummy">Send</div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="main_color_back"></div>
+                <div class="contact_site">
+                    <ul>
+                        <li>
+                            <h1>INFO</h1>
+                        </li>
+                        <li><img src="./img/github.png" /><span>깃헙 (doubleaway)</span></li>
+                        <li class="sub_contact">
+                            <p>https://github.com/doubleaway</p>
+                        </li>
+                        <li><i class="xi-mail xi-2x"></i><span>e-mail</span></li>
+                        <li class="sub_contact">
+                            <p>doubleaway0421@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+
+    <footer>
+        <h1>Thanks for Watching!</h1>
+        <p>2022. Charin Yang. All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js">  </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        $.noConflict();
+        AOS.init();
+        (function () {
+            emailjs.init("ld9qKy40S0Jb20lrQ");
+        })();
+
+    </script>
+</body>
+
+</html>

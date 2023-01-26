@@ -1,0 +1,651 @@
+@import "reset.scss","mixin.scss","data.scss","function.scss";
+$main:$colorWhite;
+$sub:rgba(0,0,0,0);
+//임시ㅇ
+#img-box1{
+  @include background-img("../img/port1.PNG");
+}
+#img-box2{
+  @include background-img("../img/port2.PNG");
+}
+
+#img-box3{
+  @include background-img("../img/port3.PNG");
+}
+#img-box4{
+  @include background-img("../img/port4.PNG");
+}
+#img-box5{
+  @include background-img("../img/port5.PNG");
+}
+//html,body
+html,body{font-family: $kor_ft;position: relative; word-break: keep-all;scroll-behavior: smooth}
+.backImg{
+  @include background-img("../img/backImg.png");
+  //opacity: 0.6;
+  @include size(100%,100vh);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+//프로젝트 내 스킬
+.skill_box{
+  width: 80%;
+  margin-left: 5%;
+  ul{
+    @include size(100%,100px);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    li{
+      transform: rotate(45deg);
+      @include size(90px,90px);
+      background: $color1;
+      border: 3px solid $color3;
+      overflow: hidden;
+      margin:{
+       top: 15px;
+      }
+      &:first-child{
+        margin-left: 0;
+      }
+      img{
+        object-fit: contain;
+        width: 100%;
+        transform: rotate(-45deg);
+      }
+      p{
+        line-height: 90px;
+        text-align: center;
+        color: $colorBlack;
+        font:{
+          size: 1.5rem;
+          family: $eng_ft;
+        }
+        letter-spacing:3px;
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
+}
+.sub_con_box{
+  @include size(30%,100vh);
+  background: $sub;
+  h1{
+    font:{
+      size: 1.65rem;
+      family: $eng_ft;
+    }
+    color:$colorBlack
+  }
+}
+.main_con_box{
+  @include size(70%,100vh);
+  background: $main;
+  .main_con {
+    margin-top: 80px;
+    padding-left: 70px;
+
+    h1 {
+      font: {
+        size: 3rem;
+        family: $eng_ft;
+      }
+    }
+
+    & > div {
+      margin-top: 30px;
+      padding-bottom: 70px;
+    }
+
+    p {
+      font: {
+        size: 1.5rem;
+      }
+      line-height: 2;
+
+      span {
+        display: inline-block;
+
+        &:last-child {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    //skill 그래프
+    .graph_box {
+      ul {
+        display: inline-block;
+        vertical-align: top;
+        @include size(30%, auto);
+
+        &:last-child {
+          margin-left: 2.5%;
+        }
+
+        li {
+          margin-top: 15px;
+          @include size(100%, 35px);
+          background: $color3;
+          border: 2px solid $color3;
+          border-radius: 17px;
+          line-height: 30px;
+          overflow: hidden;
+
+          span {
+            @include size(60%, 33px);
+            @for $i from 1 to 11 {
+              &.#{"graph"+$i}  {
+                width : 10% * $i
+              }
+            }
+            text-indent: 15px;
+            display: inline-block;
+
+            background: $color2;
+            border: 1px solid transparent;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+section{
+  &>h1{
+    position: absolute;
+    opacity: 0.7;
+    top: 30px;
+    color:$colorBlack;
+    letter-spacing: $e_letter;
+    font:{
+      family: $eng_ft;
+      size: 6rem;
+    }
+  }
+}
+
+.intro{
+  @include opacity(79,129,130);
+  @include size(100%,100vh);
+  padding-top: 10px;
+  text-align: center;
+  .main_box{
+    &::before{
+      content: "YangCharin's";
+      color:$colorWhite;
+      font:{
+        family: $eng_ft;
+        size: 1.25rem;
+      }
+
+    }
+    @include size(60%,450px);
+    margin:{
+      left: 20%;
+      top: 170px;
+    }
+    //background: red;
+    .border_box{
+      border:15px solid $colorWhite;
+      @include size(98.5%,400px);
+      .con_box{
+        @include size(98%,380px);
+        margin:{
+            top:4px;
+            left:0.5%;
+        }
+        font: {
+          size: 8rem;
+          family: $eng_ft;
+        }
+        border: 6px solid $colorBlack;
+        h1{
+
+
+          line-height: 380px;
+          color:$colorWhite;
+        }
+      }
+    }
+  }
+  .triangle{
+    margin-top: 180px;
+
+    color:$colorWhite;
+    cursor: pointer;
+    i{
+      transform: rotate(180deg);
+      display: block;
+    }
+    &::before{
+      content:"scroll";
+      color:$colorWhite;
+      transform: rotate(90deg);
+
+    }
+  }
+}
+.about{
+  @include section;
+  @include opacity(198,226,227);
+  &>h1{
+    left:3%;
+  }
+
+  .sub_con_box{
+    p{
+      margin-top: 680px;
+      padding:0 30px;
+      box-sizing: border-box;
+      font: {
+        weight: 400;
+        size: 1.25rem;
+      };
+    }
+  }
+}
+
+.project{
+  @include opacity(140,198,199);
+  position: relative;
+  &>h1{
+    right:3%;
+  }
+  .sub_ex{
+    margin:{
+      top: 380px;
+    }
+
+  }
+.project_con_box{
+  @include section;
+  padding-bottom: 10px;
+  height:100vh;
+  .main_con{
+    h1{
+      font-family: $kor_ft;
+    }
+  }
+}
+  .sub_con_box{
+    padding-left: 2.5%;
+  }
+  .skill_box{
+    margin-top: 50px;
+  }
+  .portfolio{
+    &>img{
+      width: 60%;
+      margin:{
+        left: 20%;
+        top: 50px;
+      }
+    }
+    .project_con{
+      display: flex;
+      margin-top: 0px;
+      &>div{
+        @include size(35%,540px);
+        margin-left: 5%;
+        position: relative;
+        h1{
+          display: inline-block;
+          border-bottom:3px solid $colorBlack;
+          margin: {
+            bottom: 15px;
+            top:15px;
+          }
+          line-height: 2;
+          &:first-child{
+            margin-top:0;
+          }
+        }
+        &:first-child{
+          width: 55%;
+          margin-left: 2.5%;
+        }
+       ul{
+          li{
+            &::before{
+              content:'\2713';
+              color:$color2;
+              display: inline-block;
+              margin-right: 5px;
+            }
+          }
+       }
+        &>div{
+          position: absolute;
+        }
+        .img_box{
+          @include size(85%,365px);
+
+          margin:{
+            left:7.5%;
+            top:8.5px;
+          }
+
+        }
+
+
+        .img_box_monitor{
+          @include size(100%,100%);
+          @include background-img("../img/monitor.png");
+          background-size:100% auto ;
+          &>a{
+            display: inline-block;
+            @include size(100%,100%);
+          }
+        }
+        img{
+          width:100%;
+        }
+      }
+    }
+  }
+
+}
+footer{
+  background: #4F8182;
+  @include size(100%,220px);
+  text-align: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+  color: $colorWhite;
+  h1{
+    line-height: 50px;
+  }
+  p{
+    margin-top: 5px;
+    line-height: 35px;
+    font-size: 1.25rem;
+    i{
+      vertical-align: middle;
+      margin: 0px 5px;
+    }
+  }
+}
+//780 mobile
+@media all and(max-width:780px) {
+  html,body{font-size:11px; }
+  .backImg{
+    height: 100%;
+  }
+  //프로젝트 내 스킬
+  .skill_box{
+    width: 80%;
+    margin-left: 5%;
+    ul{
+      @include size(100%,100px);
+      display: flex;
+      margin-top: 45px;
+      li{
+        transform: rotate(45deg);
+        @include size(90px,90px);
+        border: 3px solid $color3;
+        margin:{
+          top: 15px;
+        }
+        &:first-child{
+          margin-left: 0;
+        }
+        img{
+          object-fit: contain;
+          width: 100%;
+          transform: rotate(-45deg);
+        }
+        p{
+          line-height: 90px;
+          font:{
+            size: 1.5rem;
+            family: $eng_ft;
+          }
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+  section {
+    &>h1{
+      letter-spacing: 10px;
+    }
+  }
+  .sub_con_box{
+    @include size(100%,auto);
+    padding-bottom: 70px;
+    background: $sub;
+    h1{
+      font:{
+        size: 1.65rem;
+        family: $eng_ft;
+      }
+      color:$colorBlack
+    }
+  }
+  .main_con_box{
+    @include size(100%,auto);
+    background: $main;
+    .main_con {
+      margin-top: 0px;
+      padding:{
+        left: 3.5%;
+        top:40px;
+      }
+
+      h1 {
+        padding-top: 100px;
+        font: {
+          size: 3rem;
+        }
+      }
+
+      & > div {
+        margin-top: 30px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font: {
+          size: 1.5rem;
+        }
+        line-height: 2;
+
+        span {
+
+          &:last-child {
+            margin-left: 0px;
+          }
+        }
+      }
+
+      //skill 그래프
+      .graph_box {
+        ul {
+          display: block;
+          @include size(90%, auto);
+
+          &:nth-child(2) {
+            margin-left: 0%;
+          }
+
+          li {
+            margin-top: 15px;
+            @include size(100%, 35px);
+            border-radius: 17px;
+            line-height: 30px;
+
+            span {
+              text-indent: 15px;
+              display: inline-block;
+              @include size(60%, 33px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .intro{
+
+    .main_box{
+      &::before{
+        font:{
+          size: 1.25rem;
+        }
+
+      }
+      @include size(100%,450px);
+      margin:{
+        left: 0%;
+        top: 100px;
+      }
+      //background: red;
+      .border_box{
+        @include size(91.5%,200px);
+        .con_box{
+          @include size(95%,180px);
+          margin:{
+            top:3.5px;
+            left:0.5%;
+          }
+          h1{
+            line-height: 200px;
+            font-size: 7.5rem;
+          }
+        }
+      }
+    }
+  .triangle{
+    margin-top: 10px;
+  }
+  }
+  .about{
+    padding-bottom: 0;
+    display: block;
+    height: auto;
+    &>h1{
+      left:3%;
+    }
+
+    .sub_con_box{
+      margin-top: 0px;
+      padding-top: 200px;
+      p{
+        margin-top: 0px;
+        padding:0 3%;
+      }
+    }
+  }
+
+  .project{
+    @include opacity(140,198,199);
+    flex-direction: column;
+    position: relative;
+    &>h1{
+      right:0%;
+      left: 3%;
+    }
+    .sub_ex{
+      width:95%;
+      margin:{
+        top: 0px;
+      }
+
+    }
+    .project_con_box{
+      @include section;
+      height: auto;
+      display: block;
+    }
+    .sub_con_box{
+      padding-top:30px;
+    }
+    .skill_box{
+      margin-top: 50px;
+    }
+    .portfolio{
+      &>img{
+        width: 100%;
+        margin:{
+          left: 20%;
+          top: 50px;
+        }
+      }
+      .project_con{
+        display: block;
+        margin-top: 0px;
+        &>div{
+          @include size(100%,300px);
+          margin-left: 5%;
+          position: relative;
+          h1{
+            margin: {
+              bottom: 15px;
+              top:15px;
+            }
+            line-height: 2;
+            &:first-child{
+              margin-top:0;
+            }
+          }
+          &:first-child{
+            width: 100%;
+            margin-left: 0%;
+          }
+          ul{
+            li{
+              &::before{
+                content:'\2713';
+                color:$color2;
+                display: inline-block;
+                margin-right: 15px;
+              }
+            }
+          }
+          &>div{
+            position: absolute;
+          }
+          .img_box{
+            @include size(85%,183px);
+            margin:{
+              left:7.5%;
+              top:8.5px;
+            }
+
+          }
+          img{
+            width:100%;
+          }
+        }
+      }
+    }
+
+  }
+  footer{
+    @include size(100%,220px);
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    color: $colorWhite;
+    h1{
+      line-height: 50px;
+    }
+    p{
+      margin-top: 5px;
+      line-height: 35px;
+      font-size: 1.25rem;
+      i{
+        vertical-align: middle;
+        margin: 0px 5px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,429 @@
+@import "reset";//rest, html, body 100% 100%
+$hotPinkBg: #f2c1c5;//진한 분홍
+$blueBg: #b3cccf;//계산 입력하는 하늘색
+$border: 0px solid red;//보더값 보여주는
+$inputBorder: none;//input디자인
+$borderRadius: 10px;//상자 모서리
+$inputText: right;//숫자 정렬
+$boxShadow: 25px 25px  #fee9e0;//몸체 상자 그림자
+$blackFont: #3c3434;//글씨색
+$bodyColor: #faf3e2;//몸체색
+//값을 받는  input
+@mixin inputB{
+	display: inline;
+	width: 40px;
+	height: 30px;
+	text-align: $inputText;
+	border-radius: 5px;
+	border: $inputBorder;
+	margin:{
+		left: 3px;
+		top: 3px;
+	}
+}
+//몸체의 position
+@mixin absolute{
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+	width: 1200px;
+}
+//버튼
+@mixin buttons{
+    height: 50px;
+    background-color: #f0bbc1;
+    color: #cf8590;
+    font-size: 20px;
+    border-radius: 30px;
+    outline: none;
+    margin-top: 30px;
+    display: inline-block;
+    clear: both; 
+}
+//위의 귀모양
+.earBox{
+	@include absolute;
+	height: 550px;
+	border: $border;
+	.inEar{
+		width: 550px;
+		height: 550px;
+		background-color: $bodyColor;
+		border-radius: 100%;
+		box-shadow: $boxShadow;
+		text-align: center;
+		//귀안쪽 모양
+		& p{
+			width: 70%;
+			height: 70%;
+			background-color: $hotPinkBg;
+			margin-top: 50px;
+			border-radius: 100%;
+			display: inline-block;
+		}
+	}
+	.ear1{
+		border: $border;
+		float: right;
+	}
+
+}
+//전체를 감싸는 박스
+.bg{	
+	clear: both;	
+	width: 100%;
+	height: 1400px;
+	background-color: #ccdddf;
+//큰박스
+	.wrapBox{
+		@include absolute;
+		color: $blackFont;
+		background-color: $bodyColor;
+		box-shadow: $boxShadow;
+		border-radius: $borderRadius;
+		top: 250px;
+		height: 1100px;
+		text-align: center;
+	//제목 박스
+		.titleBox{
+			height: 100px;
+			line-height: 150px;
+			font-family: 'Sigmar One', cursive;
+			font-size: 30px;
+			color: $blackFont;
+		}
+		//행렬 값입력받는 input
+		.inputValue {
+			input{
+			background-color: $hotPinkBg;
+			border: $inputBorder;
+			text-align: $inputText;
+			border-radius:$borderRadius;
+			color: white;
+			height: 40px;
+			width: 120px;
+			}
+			.inputBtn
+			{	margin-left: 30px;	
+				width: 100px;
+				font-family: 'Jua', sans-serif;
+				@include buttons;
+				//버튼호버시
+				&:hover{
+					color:#fff8ea;
+					background-color: $hotPinkBg;
+					cursor: pointer;
+				}
+			}
+		}
+	//버튼모음
+		.buttons{
+			//클릭시 추가되는 클래스명
+			.btnC{
+				box-shadow: -2px 5px #cf8590;
+			border: 2px solid #cf8590;}
+			.btn{
+				font-family: 'Sigmar One', cursive;
+				width: 120px;
+				margin-left: 10px;
+				@include buttons; 
+		//버튼 호버시
+			&:hover{
+				color:#fff8ea;
+				background-color: $hotPinkBg;
+				cursor: pointer;
+				}
+			}
+		}
+		//입력받는박스를 감싼 박스
+		.inputBox{
+			margin-top: 30px;
+			width: 1000px;
+			height: 380px;
+			display: inline-block;
+			border-radius: $borderRadius;
+			background-color: $blueBg;
+			padding: 25px;
+			box-sizing: border-box;
+		}
+		//입력받는 행렬 ab  박스
+		.proceB{
+			width: 50%;
+			float: left;
+			outline: $border ;
+		//Js에서 만든 input박스
+		.inInputBox{
+			color: $blackFont;
+			@include inputB;
+			}
+		}
+		//결과박스
+		.resultprocession{
+			margin-top: 30px;
+			width: 1000px;
+			height: 380px;
+			border-radius: $borderRadius;
+			display: inline-block;
+			color: $blackFont;
+			background-color: $blueBg;
+			padding: 25px;
+			box-sizing: border-box;
+			.resultBox{
+				@include inputB;
+			}
+		}
+	}
+}
+		//alert창
+		.alertBox{
+			width: 300px;
+			height: 200px;
+			background-color: #fee9e0;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin:{
+			left: -150px;
+			top: -100px;
+			}	
+			border: $border;
+			border-radius: 20px;
+			z-index: 10;
+			padding: 30px;
+			box-sizing: border-box;
+			display: none;
+			color: $blackFont;
+			font-family: 'Jua', sans-serif;
+		
+			//alert 창  닫기 버튼
+			.closeBox{
+				cursor: pointer;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			//x표시		
+			&::after{
+				content:"x";
+				width: 40px;
+				padding: 1px 6px;
+				background-color: #cf8590;
+				text-align: center;
+				color: white;
+				}
+			}
+		}
+@import "reset";//rest, html, body 100% 100%
+$hotPinkBg: #f2c1c5;//진한 분홍
+$blueBg: #b3cccf;//계산 입력하는 하늘색
+$border: 0px solid red;//보더값 보여주는
+$inputBorder: none;//input디자인
+$borderRadius: 10px;//상자 모서리
+$inputText: right;//숫자 정렬
+$boxShadow: 25px 25px  #fee9e0;//몸체 상자 그림자
+$blackFont: #3c3434;//글씨색
+$bodyColor: #faf3e2;//몸체색
+//값을 받는  input
+@mixin inputB{
+	display: inline;
+	width: 40px;
+	height: 30px;
+	text-align: $inputText;
+	border-radius: 5px;
+	border: $inputBorder;
+	margin:{
+		left: 3px;
+		top: 3px;
+	}
+}
+//몸체의 position
+@mixin absolute{
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+	width: 1200px;
+}
+//버튼
+@mixin buttons{
+    height: 50px;
+    background-color: #f0bbc1;
+    color: #cf8590;
+    font-size: 20px;
+    border-radius: 30px;
+    outline: none;
+    margin-top: 30px;
+    display: inline-block;
+    clear: both; 
+}
+//위의 귀모양
+.earBox{
+	@include absolute;
+	height: 550px;
+	border: $border;
+	.inEar{
+		width: 550px;
+		height: 550px;
+		background-color: $bodyColor;
+		border-radius: 100%;
+		box-shadow: $boxShadow;
+		text-align: center;
+		//귀안쪽 모양
+		& p{
+			width: 70%;
+			height: 70%;
+			background-color: $hotPinkBg;
+			margin-top: 50px;
+			border-radius: 100%;
+			display: inline-block;
+		}
+	}
+	.ear1{
+		border: $border;
+		float: right;
+	}
+
+}
+//전체를 감싸는 박스
+.bg{	
+	clear: both;	
+	width: 100%;
+	height: 1400px;
+	background-color: #ccdddf;
+//큰박스
+	.wrapBox{
+		@include absolute;
+		color: $blackFont;
+		background-color: $bodyColor;
+		box-shadow: $boxShadow;
+		border-radius: $borderRadius;
+		top: 250px;
+		height: 1100px;
+		text-align: center;
+	//제목 박스
+		.titleBox{
+			height: 100px;
+			line-height: 150px;
+			font-family: 'Sigmar One', cursive;
+			font-size: 30px;
+			color: $blackFont;
+		}
+		//행렬 값입력받는 input
+		.inputValue {
+			input{
+			background-color: $hotPinkBg;
+			border: $inputBorder;
+			text-align: $inputText;
+			border-radius:$borderRadius;
+			color: white;
+			height: 40px;
+			width: 120px;
+			}
+			.inputBtn
+			{	margin-left: 30px;	
+				width: 100px;
+				font-family: 'Jua', sans-serif;
+				@include buttons;
+				//버튼호버시
+				&:hover{
+					color:#fff8ea;
+					background-color: $hotPinkBg;
+					cursor: pointer;
+				}
+			}
+		}
+	//버튼모음
+		.buttons{
+			//클릭시 추가되는 클래스명
+			.btnC{
+				box-shadow: -2px 5px #cf8590;
+			border: 2px solid #cf8590;}
+			.btn{
+				font-family: 'Sigmar One', cursive;
+				width: 120px;
+				margin-left: 10px;
+				@include buttons; 
+		//버튼 호버시
+			&:hover{
+				color:#fff8ea;
+				background-color: $hotPinkBg;
+				cursor: pointer;
+				}
+			}
+		}
+		//입력받는박스를 감싼 박스
+		.inputBox{
+			margin-top: 30px;
+			width: 1000px;
+			height: 380px;
+			display: inline-block;
+			border-radius: $borderRadius;
+			background-color: $blueBg;
+			padding: 25px;
+			box-sizing: border-box;
+		}
+		//입력받는 행렬 ab  박스
+		.proceB{
+			width: 50%;
+			float: left;
+			outline: $border ;
+		//Js에서 만든 input박스
+		.inInputBox{
+			color: $blackFont;
+			@include inputB;
+			}
+		}
+		//결과박스
+		.resultprocession{
+			margin-top: 30px;
+			width: 1000px;
+			height: 380px;
+			border-radius: $borderRadius;
+			display: inline-block;
+			color: $blackFont;
+			background-color: $blueBg;
+			padding: 25px;
+			box-sizing: border-box;
+			.resultBox{
+				@include inputB;
+			}
+		}
+	}
+}
+		//alert창
+		.alertBox{
+			width: 300px;
+			height: 200px;
+			background-color: #fee9e0;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin:{
+			left: -150px;
+			top: -100px;
+			}	
+			border: $border;
+			border-radius: 20px;
+			z-index: 10;
+			padding: 30px;
+			box-sizing: border-box;
+			display: none;
+			color: $blackFont;
+			font-family: 'Jua', sans-serif;
+		
+			//alert 창  닫기 버튼
+			.closeBox{
+				cursor: pointer;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			//x표시		
+			&::after{
+				content:"x";
+				width: 40px;
+				padding: 1px 6px;
+				background-color: #cf8590;
+				text-align: center;
+				color: white;
+				}
+			}
+		}
+

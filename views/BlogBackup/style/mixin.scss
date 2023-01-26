@@ -1,0 +1,35 @@
+@mixin web_flex{
+  display: flex;
+}
+@mixin section{
+  position: relative;
+  @include web_flex;
+  //background-color: $color;
+  box-sizing: border-box;
+  outline: 1px solid rgba(0,0,0,0.2);
+  padding:{
+    top:0px;
+    bottom: 40px;
+  }
+  @include size(100%,100vh);
+}
+@mixin size($w,$h){
+  width: $w;
+  height: $h;
+}
+@mixin img{
+  object-fit: cover;
+}
+@mixin background-img($url){
+  background: {
+    image: url($url);
+    size:cover;
+    repeat: no-repeat;
+  };
+}
+@mixin opacity($r,$g,$b){
+  background: rgba($r,$g,$b,0.5);
+}
+@mixin graphWidthmix($w){
+  width: $w;
+}

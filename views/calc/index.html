@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<title>행렬 계산기</title>
+		<link href="https://fonts.googleapis.com/css?family=Jua|Sigmar+One&display=swap" rel="stylesheet">
+		<link href="calc/project1.css" rel="stylesheet" type="text/css">
+		<script src="calc/caculator2.js" type="text/javascript"></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--귀모양디자인-->
+		<div class="earBox">
+			<div class="ear1 inEar">
+				<p></p>
+			</div>
+			<div class="ear2 inEar">
+				<p></p>
+			</div>
+		</div>
+		<section class="bg">
+			<article id="wrapBox" class="wrapBox">
+				<article class="inputValue">
+					<h1 class="titleBox">Matrix calculator</h1>
+					<span class="spanTxt">행:</span> <input id="line" class="line" type="number" value="0" min=0 max=10> &#215 
+					<span calss="spanTxt">열:</span> <input id="heat" class="heat"type="number" value="0" min=0 max=10>
+					<button id="numberInput" class="inputBtn">입력</button>
+				</article>
+				<article  class="inputBox">
+					<!--값을 입력받는박스-->
+					<div id="processionBox1" class="processionBox1 proceB"></div>
+					<div id="processionBox2"  class="processionBox2 proceB"></div>
+				</article>	
+				<!--계산 버튼-->
+				<article id="buttons" class="buttons"> 
+					<button id="plusC" class="btn">A + B</button>
+					<button id="minusC" class="btn">A - B</button>
+					<button id="multiC" class="btn">A x B</button>
+					<button id="ResetC" class="btn">Reset</button>
+					<button id="RandomC" class="btn">Random</button>
+				</article>
+				<!--결과값 넣는곳-->
+				<article id="resultProcession" class="resultprocession"></article>
+			</article>
+		</section>
+
+		<!--alert 박스-->
+			<div id="alertBoxline" class="alertBox"> 
+				<p id="alertText"></p>
+				<p id="closeBox" class="closeBox"></p>
+			</div>
+	</body>
+</html>
